@@ -1,0 +1,55 @@
+<html>
+<head>
+
+    <title>XML http request example</title>
+    <link rel = "stylesheet" href = "style.css">
+
+</head>
+<body>
+
+    This is for XML parsing
+
+    <script>
+        // creating a XMLHttpRequest object
+        const xhr = new XMLHttpRequest();
+
+        // define the url to which the request will be sent
+        const url = "https://restcountries.com/v3.1/all"; //replace with your API endpoint
+
+        // this fuction is called whenever the state of the XMLHttpRequest change
+        xhr.onreadystatechange = function() {
+            // XMLHttpRequest.DONE means the operation is complete
+            if ( xhr.readystate === XMLHttpRequest.DONE){
+                // check if the request was successfull (status code 200)
+                if (xhr.status == 200){
+                    // parse the json response
+                    const response = JSON.parse(xhr.responseText);
+                    // call a function to display a data
+                    for ( let i=0; i<response.length; i++ ){
+                        console.log(response[i].name.common); //there is name and common keys of obj in url
+                    }
+                } else {
+                    // log an error msg if the request fails
+                    console.error("There was a problem with the request");
+                }
+            }
+        };
+
+        // open a connection with the server
+        xhr.open('GET', url, true);  // parameters: methods, url, asynchronous (true/false)
+
+        // Send the request
+        xhr.send(); // for POST requests, you can pass data as an argument to send()
+
+    </script>
+</body>
+</html>
+
+<!-- HTTP response status codes -->
+<!-- HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes: -->
+
+<!-- Informational responses (100 – 199) -->
+<!-- Successful responses (200 – 299) -->
+<!-- Redirection messages (300 – 399) -->
+<!-- Client error responses (400 – 499) -->
+<!-- Server error responses (500 – 599) -->
