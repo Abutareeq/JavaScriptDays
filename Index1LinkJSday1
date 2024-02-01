@@ -1,0 +1,12 @@
+<html>
+<head>
+
+    <title>Tareeq</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <h1 class="heading">this is my page</h1>
+    <h1 class="heading2">this is my space</h1>
+</body>
+</html>
