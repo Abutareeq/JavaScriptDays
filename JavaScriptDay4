@@ -1,0 +1,82 @@
+// // Comparison of two JSON objects
+// const obj1 = {
+//     a : 1,
+//     b : 2
+// }
+// const obj2 = {
+//     b : 2,
+//     a : 1
+// }
+// // if keys and values of objects are same (no matter if they were not in order) the json can be compared
+// // if the values and keys are not same then it will show false 
+// console.log(obj1 === obj2);
+// // output is false because elements are not in order so both the objects are not equal
+// console.log(obj1.a === obj2.a && obj1.b === obj2.b);
+// // output is True because we are compare in the respect of values and keys not on order
+
+// // SCOPE & HOISTING
+
+/*
+Scope determines the accessibility (visibility) of variables. there is no concept of scope without block.
+JavaScript variables have 3 types of scope:
+Block scope
+Function scope
+Global scope
+
+Block is a instruction which is given to any variable for set a limit of use of variable.
+Variables declared inside a { } block cannot be accessed from outside the block.
+
+VAR is form of declaration of variable in JS.var is used as a globle varaible means if v use var a and 
+asigned a value of a then it will be use in the all code as it is without any block.Variables declared 
+with the var keyword can NOT have block scope. Variables declared inside a { } block can be accessed 
+from outside the block.
+BUT in a special blocks just like function we cannot use var outside of block if it is declared in block.
+function make the variable private. only function can use that variable.
+
+LET --> Variables declared with let have Block Scope. Variables declared with let must be Declared 
+before use. Variables declared with let cannot be Redeclared in the same scope.
+
+HOISTING--> hoisting is JavaScript's default behavior of moving declarations to the top. JavaScript 
+Declarations are Hoisted. In JavaScript, a variable can be declared after it has been used.
+In other words; a variable can be used before it has been declared. Ex of hoinsting-->
+*/
+// var x       // some random value assign to x
+// x = 3       // now we change the random value with 3
+// console.log(x)      // output--> 3
+
+// let x       // some random value assign to x
+// x = 3       // now we change the random value with 3
+// console.log(x)      // output--> 3
+
+// but with const we cant do this because we cant assign random value so we have to assign a value
+// const x = 3      
+// console.log(x)      // output--> 3
+
+// {
+//     let x = 3;
+//     {
+//         console.log(x);
+//     }
+// }               // output --> 3
+
+// {
+//     const x = 3;
+//     {
+//         console.log(x);
+//     }
+// }               // output --> 3
+
+// {
+//     const x = 2;
+//     function f(){
+//         console.log(x);
+//     }
+//     f()         // we have to call function
+// }               // output --> 2
+// // it is working with function because fuction lie within block
+
+// FUNCTION --> A special block of code 
+// fuction abc(){
+//     console.log("function is called");
+// }
+// abc()       // its neccesary to call a fuction to make working it
