@@ -106,3 +106,45 @@ In other words; a variable can be used before it has been declared. Ex of hoinst
 // }
 // abu(1,2)
 // console.log(abu(1,2));          // Output --> 3
+
+// // Alternative Way -->
+// function abu(r,t){
+//      return r+t;
+// }
+// var a = abu(1,2);
+// console.log(a);                    // Output --> 3
+
+// function abu(r,t){
+//         console.log("hello");
+//          return r+t;
+//     }
+//     /* remember console only work if we use console before return in a function. if v r using return in function
+// then after that we couldn't use console. agar return value kr rhe he or console bhi use kr rhe he to console return
+// ke pehle aayega */
+//  var a = abu(1,2);
+//  console.log(a);        // Output --> hello 3
+
+// // function xyz(a,b){
+// //     if(a>b){
+// //         return a;
+// //     }
+// //     console.log("a");
+// // }
+// // var b = xyz(4,5);
+// // console.log(b);
+// //  Output --> a , undefined
+// /* the output is a of console.log("a") because a is not greater then b so the value never return. and after 
+// the execution of if statement v reach at the output undefined because the function never return 
+// so  console.log(b) is undefined. agar fuction return hota to function call hota or fir b exicute hota */
+// /* but if we do reciprocal of this then --> */
+// function xyz(a,b){
+//     if(a>b){
+//         return a;
+//     }
+//     console.log("a");
+//     return "sample return"
+// }
+// var b = xyz(4,5);
+// console.log(b);         // Output --> a, sample return
+// /* in this scenario we got output a for the if statement return and output sample return for function
+// xyz by console.log(b) */
