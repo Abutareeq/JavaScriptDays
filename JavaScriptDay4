@@ -80,3 +80,29 @@ In other words; a variable can be used before it has been declared. Ex of hoinst
 //     console.log("function is called");
 // }
 // abc()       // its neccesary to call a fuction to make working it
+
+// Parameters are pass in function under braket
+// function abc(arr,str,flag){
+//         console.log(arr,str,flag);
+//     }
+//     abc([1,2,3],"sample",true)      //Output-->[ 1, 2, 3 ] sample true
+
+// function abv(arr,str,flag){
+//     console.log(arr)
+//     console.log(str)
+//     console.log(flag)
+// }
+
+// var arr = [1,2,3];
+// var str = "sample";
+// var flag = true;
+// abv(arr,str,flag)            // Output -->  [ 1, 2, 3 ] sample true
+// /* yaad rahe function ke ander jo parameter he wo sirf function ke personal he. wo bahar use nahi honge.
+// isliye jo var arr, var str alag he function ke arr, str se. lekin kyuki hmne function ko var ki value 
+// assign krne ke bad call kiya he isliye yeh di hui falue fetch karega. */
+
+// function abu(r,t){
+//     return r+t;
+// }
+// abu(1,2)
+// console.log(abu(1,2));          // Output --> 3
